@@ -1,5 +1,5 @@
-import { Pool } from 'pg';
-import { env } from './env';
+import { Pool } from "pg";
+import { env } from "./env";
 
 const pool = new Pool({
     connectionString: env.DATABASE_URL,
@@ -11,12 +11,12 @@ const pool = new Pool({
     connectionTimeoutMillis: 2000,
 });
 
-pool.on('connect', () => {
-    console.log('Database connected successfully');
+pool.on("connect", () => {
+    console.log("Database connected successfully");
 });
 
-pool.on('error', (err) => {
-    console.error('Unexpected database error:', err);
+pool.on("error", (err) => {
+    console.error("Unexpected database error:", err);
     process.exit(-1);
 });
 
@@ -25,10 +25,10 @@ export const query = async (text: string, params?: unknown[]) => {
     try {
         const result = await pool.query(text, params);
         const duration = Date.now() - start;
-        console.log('Executed query', { text: text.substring(0, 50), duration, rows: result.rowCount });
+        console.log("Executed query", { text: text.substring(0, 50), duration, rows: result.rowCount });
         return result;
     } catch (error) {
-        console.error('Database query error:', error);
+        console.error("Database query error:", error);
         throw error;
     }
 };

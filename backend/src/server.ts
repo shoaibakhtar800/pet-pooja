@@ -7,8 +7,8 @@ const app: Application = express();
 
 app.use(cors({
     origin: env.CORS_ORIGINS,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
 }));
 
@@ -17,27 +17,27 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/health', (req: Request, res: Response) => {
     res.status(200).json({
-        status: 'success',
-        message: 'Expense Tracker API is running',
+        status: "success",
+        message: "Expense Tracker API is running",
         timestamp: new Date().toISOString(),
         uptime: process.uptime(),
     });
 });
 
-app.use('/api/v1', routes);
+app.use("/api/v1", routes);
 
 app.use((req: Request, res: Response) => {
     res.status(404).json({
         success: false,
-        message: 'Route not found',
+        message: "Route not found",
     });
 });
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-    console.error('Error:', err.stack);
+    console.error("Error:", err.stack);
     res.status(500).json({
         success: false,
-        message: env.NODE_ENV === 'production' ? 'Internal server error' : err.message,
+        message: env.NODE_ENV === "production" ? "Internal server error" : err.message,
     });
 });
 

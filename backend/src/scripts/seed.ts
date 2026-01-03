@@ -1,10 +1,11 @@
-import { Pool } from 'pg';
-import dotenv from 'dotenv';
+import { Pool } from "pg";
+import dotenv from "dotenv";
+import { env } from "../config/env";
 
 dotenv.config();
 
 const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: env.DATABASE_URL,
     ssl: {
         rejectUnauthorized: false
     }
@@ -14,9 +15,9 @@ const seedDatabase = async () => {
     const client = await pool.connect();
     
     try {
-        console.log('Starting database setup...\n');
+        console.log("Starting database setup...\n");
 
-        console.log('Creating Users table...');
+        console.log("Creating Users table...");
         await client.query(`
             CREATE TABLE IF NOT EXISTS users (
                 id SERIAL PRIMARY KEY,
