@@ -481,13 +481,13 @@ pet-pooja/
 ## 📸 Screenshots
 
 ### Expenses Dashboard
-> Dashboard showing expense list with filters and pagination
+<img width="1906" height="908" alt="image" src="https://github.com/user-attachments/assets/2acef86f-2621-4387-9bf5-3c57cce1e515" />
 
 ### Add Expense Dialog
-> Form to add new expense with validation
+<img width="565" height="442" alt="image" src="https://github.com/user-attachments/assets/e18fd53e-7bc5-407a-9e4b-6301ec6f69a7" />
 
 ### Statistics Panel
-> Analytics showing top spending days, monthly changes, and predictions
+<img width="1910" height="906" alt="image" src="https://github.com/user-attachments/assets/4b13c2c0-e7a4-4506-8c0b-50f6955ad375" />
 
 ---
 
