@@ -191,12 +191,7 @@ npm run dev
 
 You'll see:
 ```
-╔═══════════════════════════════════════════════╗
-║         EXPENSE TRACKER API SERVER            ║
-╠═══════════════════════════════════════════════╣
-║  Port:        4200                            ║
-║  Environment: development                     ║
-╚═══════════════════════════════════════════════╝
+<img width="1114" height="238" alt="image" src="https://github.com/user-attachments/assets/b6396891-fabc-40f9-9970-36069bd33cf6" />
 ```
 
 ### Start Frontend Server
@@ -472,8 +467,7 @@ pet-pooja/
 │   ├── package.json
 │   └── vite.config.ts
 │
-├── 📄 README.md
-└── 📄 Mern Stack Assignment-Shoaib.pdf
+└── 📄 README.md
 ```
 
 ---
