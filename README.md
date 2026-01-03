@@ -191,7 +191,18 @@ npm run dev
 
 You'll see:
 ```
-<img width="1114" height="238" alt="image" src="https://github.com/user-attachments/assets/b6396891-fabc-40f9-9970-36069bd33cf6" />
+npm run dev
+
+> Pet Pooja Backend@1.0.0 dev
+> nodemon src/server.ts
+
+[nodemon] 3.1.11
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): src\**\*
+[nodemon] watching extensions: ts,json
+[nodemon] starting `ts-node src/server.ts src/server.ts`
+[dotenv@17.2.3] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Server is running on port 4200
 ```
 
 ### Start Frontend Server
