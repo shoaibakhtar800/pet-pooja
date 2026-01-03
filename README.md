@@ -553,9 +553,3 @@ Error: EADDRINUSE
 This project is licensed under the MIT License.
 
 ---
-
-<div align="center">
-
-**⭐ If you found this project helpful, please give it a star! ⭐**
-
-</div>
