@@ -208,10 +208,13 @@ export function ExpenseForm({ expense, onClose, trigger }: ExpenseFormProps) {
                                                 type="number"
                                                 step="0.01"
                                                 min="0.01"
-                                                placeholder="0.00"
-                                                className="bg-slate-800 border-slate-600 text-white"
-                                                {...field}
-                                                onChange={(e) => field.onChange(parseFloat(e.target.value) || 0)}
+                                                placeholder="Enter amount"
+                                                className="bg-slate-800 border-slate-600 text-white [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [-moz-appearance:textfield]"
+                                                value={field.value || ''}
+                                                onChange={(e) => field.onChange(e.target.value ? parseFloat(e.target.value) : 0)}
+                                                onBlur={field.onBlur}
+                                                name={field.name}
+                                                ref={field.ref}
                                             />
                                         </FormControl>
                                         <FormMessage />
