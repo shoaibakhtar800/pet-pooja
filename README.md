@@ -191,12 +191,18 @@ npm run dev
 
 You'll see:
 ```
-╔═══════════════════════════════════════════════╗
-║         EXPENSE TRACKER API SERVER            ║
-╠═══════════════════════════════════════════════╣
-║  Port:        4200                            ║
-║  Environment: development                     ║
-╚═══════════════════════════════════════════════╝
+npm run dev
+
+> Pet Pooja Backend@1.0.0 dev
+> nodemon src/server.ts
+
+[nodemon] 3.1.11
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): src\**\*
+[nodemon] watching extensions: ts,json
+[nodemon] starting `ts-node src/server.ts src/server.ts`
+[dotenv@17.2.3] injecting env (3) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+Server is running on port 4200
 ```
 
 ### Start Frontend Server
@@ -472,8 +478,7 @@ pet-pooja/
 │   ├── package.json
 │   └── vite.config.ts
 │
-├── 📄 README.md
-└── 📄 Mern Stack Assignment-Shoaib.pdf
+└── 📄 README.md
 ```
 
 ---
@@ -481,13 +486,13 @@ pet-pooja/
 ## 📸 Screenshots
 
 ### Expenses Dashboard
-> Dashboard showing expense list with filters and pagination
+<img width="1906" height="908" alt="image" src="https://github.com/user-attachments/assets/2acef86f-2621-4387-9bf5-3c57cce1e515" />
 
 ### Add Expense Dialog
-> Form to add new expense with validation
+<img width="565" height="442" alt="image" src="https://github.com/user-attachments/assets/e18fd53e-7bc5-407a-9e4b-6301ec6f69a7" />
 
 ### Statistics Panel
-> Analytics showing top spending days, monthly changes, and predictions
+<img width="1910" height="906" alt="image" src="https://github.com/user-attachments/assets/4b13c2c0-e7a4-4506-8c0b-50f6955ad375" />
 
 ---
 
@@ -548,9 +553,3 @@ Error: EADDRINUSE
 This project is licensed under the MIT License.
 
 ---
-
-<div align="center">
-
-**⭐ If you found this project helpful, please give it a star! ⭐**
-
-</div>
