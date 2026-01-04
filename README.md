@@ -11,53 +11,63 @@ A modern, full-stack expense tracking application built with **React**, **Node.j
 
 ## 📋 Table of Contents
 
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Prerequisites](#-prerequisites)
-- [Installation & Setup](#-installation--setup)
-- [Database Setup](#-database-setup)
-- [Running the Application](#-running-the-application)
-- [API Documentation](#-api-documentation)
-- [Database Schema](#-database-schema)
-- [Statistics Queries](#-statistics-queries)
-- [Project Structure](#-project-structure)
-- [Screenshots](#-screenshots)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Prerequisites](#prerequisites)
+- [Installation & Setup](#installation-setup)
+- [Database Setup](#database-setup)
+- [Running the Application](#running-the-application)
+- [API Documentation](#api-documentation)
+- [Database Schema](#database-schema)
+- [Statistics Queries](#statistics-queries)
+- [Project Structure](#project-structure)
+- [Screenshots](#screenshots)
+- [Available Scripts](#available-scripts)
+- [Troubleshooting](#troubleshooting)
 
 ---
+
+<a id="features"></a>
 
 ## ✨ Features
 
 ### 🎨 Frontend (React.js)
-| Feature | Description |
-|---------|-------------|
-| 📊 Dashboard | Add, edit, and delete expenses with user, category, date, and amount |
-| 🔍 Advanced Filters | Filter expenses by user, category, or date range |
-| 📄 Pagination | Paginated expense list with customizable page size |
-| 🎯 Form Validation | Client-side validation using Zod schema |
-| 📱 Responsive Design | Works seamlessly on desktop and mobile devices |
-| ⚡ React Query | Efficient data fetching, caching, and synchronization |
+
+| Feature              | Description                                                          |
+| -------------------- | -------------------------------------------------------------------- |
+| 📊 Dashboard         | Add, edit, and delete expenses with user, category, date, and amount |
+| 🔍 Advanced Filters  | Filter expenses by user, category, or date range                     |
+| 📄 Pagination        | Paginated expense list with customizable page size                   |
+| 🎯 Form Validation   | Client-side validation using Zod schema                              |
+| 📱 Responsive Design | Works seamlessly on desktop and mobile devices                       |
+| ⚡ React Query       | Efficient data fetching, caching, and synchronization                |
 
 ### 🔧 Backend (Node.js)
-| Feature | Description |
-|---------|-------------|
-| 🔐 RESTful API | Clean and well-structured API endpoints |
-| ✅ Input Validation | Server-side validation using express-validator |
-| 📈 Statistic 1 | Find each user's top 3 days by total expenditure |
-| 📉 Statistic 2 | Calculate percentage change from previous month |
-| 🔮 Statistic 3 | Predict next month's expenditure (3-month average) |
+
+| Feature             | Description                                        |
+| ------------------- | -------------------------------------------------- |
+| 🔐 RESTful API      | Clean and well-structured API endpoints            |
+| ✅ Input Validation | Server-side validation using express-validator     |
+| 📈 Statistic 1      | Find each user's top 3 days by total expenditure   |
+| 📉 Statistic 2      | Calculate percentage change from previous month    |
+| 🔮 Statistic 3      | Predict next month's expenditure (3-month average) |
 
 ### 🗄️ Database (PostgreSQL)
-| Table | Description |
-|-------|-------------|
-| `users` | User information (id, name, email, status) |
-| `categories` | Expense categories (id, name) |
-| `expenses` | Expense records with foreign key relationships |
+
+| Table        | Description                                    |
+| ------------ | ---------------------------------------------- |
+| `users`      | User information (id, name, email, status)     |
+| `categories` | Expense categories (id, name)                  |
+| `expenses`   | Expense records with foreign key relationships |
 
 ---
+
+<a id="tech-stack"></a>
 
 ## 🛠 Tech Stack
 
 ### Frontend
+
 ```
 ├── React 19          → UI Library
 ├── TypeScript        → Type Safety
@@ -71,6 +81,7 @@ A modern, full-stack expense tracking application built with **React**, **Node.j
 ```
 
 ### Backend
+
 ```
 ├── Node.js           → Runtime Environment
 ├── Express 5         → Web Framework
@@ -81,26 +92,32 @@ A modern, full-stack expense tracking application built with **React**, **Node.j
 ```
 
 ### Database
+
 ```
 └── PostgreSQL (Neon DB) → Cloud Database (No ORM - Raw SQL)
 ```
 
 ---
 
+<a id="prerequisites"></a>
+
 ## 📦 Prerequisites
 
 Before you begin, ensure you have the following installed:
 
-| Requirement | Version | Check Command |
-|-------------|---------|---------------|
-| Node.js | v18 or higher | `node --version` |
-| npm | v9 or higher | `npm --version` |
-| Git | Latest | `git --version` |
+| Requirement | Version       | Check Command    |
+| ----------- | ------------- | ---------------- |
+| Node.js     | v18 or higher | `node --version` |
+| npm         | v9 or higher  | `npm --version`  |
+| Git         | Latest        | `git --version`  |
 
 You'll also need:
+
 - 🐘 PostgreSQL database (We recommend [Neon](https://neon.tech) - Free tier available)
 
 ---
+
+<a id="installation-setup"></a>
 
 ## 🚀 Installation & Setup
 
@@ -147,6 +164,8 @@ npm install
 
 ---
 
+<a id="database-setup"></a>
+
 ## 🗄 Database Setup
 
 You have two options to set up the database:
@@ -162,6 +181,7 @@ npm run db:seed
 ```
 
 This will:
+
 - ✅ Create all tables (users, categories, expenses)
 - ✅ Create indexes for optimized queries
 - ✅ Insert sample users (5 users)
@@ -177,6 +197,8 @@ This will:
 
 ---
 
+<a id="running-the-application"></a>
+
 ## ▶️ Running the Application
 
 ### Start Backend Server
@@ -190,6 +212,7 @@ npm run dev
 ✅ Backend will start at: `http://localhost:4200`
 
 You'll see:
+
 ```
 npm run dev
 
@@ -217,70 +240,80 @@ npm run dev
 
 ---
 
+<a id="api-documentation"></a>
+
 ## 📡 API Documentation
 
 ### Base URL
+
 ```
 http://localhost:4200/api/v1
 ```
 
 ### Health Check
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/health` | Server health status |
+
+| Method | Endpoint  | Description          |
+| ------ | --------- | -------------------- |
+| GET    | `/health` | Server health status |
 
 ### Users
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/v1/users` | Get all users |
-| GET | `/api/v1/users/active` | Get active users only |
+
+| Method | Endpoint               | Description           |
+| ------ | ---------------------- | --------------------- |
+| GET    | `/api/v1/users`        | Get all users         |
+| GET    | `/api/v1/users/active` | Get active users only |
 
 ### Categories
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/v1/categories` | Get all categories |
+
+| Method | Endpoint             | Description        |
+| ------ | -------------------- | ------------------ |
+| GET    | `/api/v1/categories` | Get all categories |
 
 ### Expenses
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/v1/expenses` | Get paginated expenses |
-| GET | `/api/v1/expenses/:id` | Get expense by ID |
-| POST | `/api/v1/expenses` | Create new expense |
-| PUT | `/api/v1/expenses/:id` | Update expense |
-| DELETE | `/api/v1/expenses/:id` | Delete expense |
+
+| Method | Endpoint               | Description            |
+| ------ | ---------------------- | ---------------------- |
+| GET    | `/api/v1/expenses`     | Get paginated expenses |
+| GET    | `/api/v1/expenses/:id` | Get expense by ID      |
+| POST   | `/api/v1/expenses`     | Create new expense     |
+| PUT    | `/api/v1/expenses/:id` | Update expense         |
+| DELETE | `/api/v1/expenses/:id` | Delete expense         |
 
 #### Query Parameters for GET /expenses
 
-| Parameter | Type | Description | Example |
-|-----------|------|-------------|---------|
-| `page` | number | Page number (default: 1) | `?page=2` |
-| `limit` | number | Items per page (default: 10, max: 100) | `?limit=20` |
-| `user_id` | number | Filter by user ID | `?user_id=1` |
-| `category_id` | number | Filter by category ID | `?category_id=3` |
-| `start_date` | string | Filter from date (YYYY-MM-DD) | `?start_date=2024-01-01` |
-| `end_date` | string | Filter to date (YYYY-MM-DD) | `?end_date=2024-12-31` |
+| Parameter     | Type   | Description                            | Example                  |
+| ------------- | ------ | -------------------------------------- | ------------------------ |
+| `page`        | number | Page number (default: 1)               | `?page=2`                |
+| `limit`       | number | Items per page (default: 10, max: 100) | `?limit=20`              |
+| `user_id`     | number | Filter by user ID                      | `?user_id=1`             |
+| `category_id` | number | Filter by category ID                  | `?category_id=3`         |
+| `start_date`  | string | Filter from date (YYYY-MM-DD)          | `?start_date=2024-01-01` |
+| `end_date`    | string | Filter to date (YYYY-MM-DD)            | `?end_date=2024-12-31`   |
 
 #### Create Expense Request Body
 
 ```json
 {
-    "user_id": 1,
-    "category_id": 1,
-    "amount": 250.50,
-    "date": "2024-01-15",
-    "description": "Lunch at restaurant"
+  "user_id": 1,
+  "category_id": 1,
+  "amount": 250.5,
+  "date": "2024-01-15",
+  "description": "Lunch at restaurant"
 }
 ```
 
 ### Statistics
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/v1/statistics` | Get all statistics at once |
-| GET | `/api/v1/statistics/top-days` | Top 3 spending days per user |
-| GET | `/api/v1/statistics/monthly-change` | Monthly percentage change |
-| GET | `/api/v1/statistics/prediction` | Predicted next month expenditure |
+
+| Method | Endpoint                            | Description                      |
+| ------ | ----------------------------------- | -------------------------------- |
+| GET    | `/api/v1/statistics`                | Get all statistics at once       |
+| GET    | `/api/v1/statistics/top-days`       | Top 3 spending days per user     |
+| GET    | `/api/v1/statistics/monthly-change` | Monthly percentage change        |
+| GET    | `/api/v1/statistics/prediction`     | Predicted next month expenditure |
 
 ---
+
+<a id="database-schema"></a>
 
 ## 🗃 Database Schema
 
@@ -341,6 +374,8 @@ CREATE INDEX idx_expenses_user_date ON expenses(user_id, date);
 
 ---
 
+<a id="statistics-queries"></a>
+
 ## 📊 Statistics Queries
 
 ### Statistic 1: Top 3 Days by Expenditure (Per User)
@@ -356,13 +391,13 @@ WITH daily_totals AS (
 ranked_days AS (
     SELECT user_id, date, total_amount,
            ROW_NUMBER() OVER (
-               PARTITION BY user_id 
+               PARTITION BY user_id
                ORDER BY total_amount DESC
            ) as rank
     FROM daily_totals
 )
-SELECT * FROM ranked_days 
-WHERE rank <= 3 
+SELECT * FROM ranked_days
+WHERE rank <= 3
 ORDER BY user_id, total_amount DESC;
 ```
 
@@ -373,16 +408,16 @@ Calculate spending change from previous month.
 ```sql
 WITH monthly_totals AS (
     SELECT user_id, DATE_TRUNC('month', date) as month, SUM(amount) as total
-    FROM expenses 
+    FROM expenses
     GROUP BY user_id, DATE_TRUNC('month', date)
 )
-SELECT 
-    user_id, 
+SELECT
+    user_id,
     month,
     total as current_month_total,
     LAG(total) OVER (PARTITION BY user_id ORDER BY month) as prev_month_total,
     ROUND(
-        ((total - LAG(total) OVER (PARTITION BY user_id ORDER BY month)) / 
+        ((total - LAG(total) OVER (PARTITION BY user_id ORDER BY month)) /
         LAG(total) OVER (PARTITION BY user_id ORDER BY month) * 100
     )::numeric, 2) as percentage_change
 FROM monthly_totals;
@@ -400,14 +435,16 @@ WITH last_3_months AS (
       AND date < DATE_TRUNC('month', CURRENT_DATE)
     GROUP BY user_id, DATE_TRUNC('month', date)
 )
-SELECT 
-    user_id, 
+SELECT
+    user_id,
     ROUND(AVG(monthly_total)::numeric, 2) as predicted_next_month
 FROM last_3_months
 GROUP BY user_id;
 ```
 
 ---
+
+<a id="project-structure"></a>
 
 ## 📁 Project Structure
 
@@ -483,61 +520,76 @@ pet-pooja/
 
 ---
 
+<a id="screenshots"></a>
+
 ## 📸 Screenshots
 
 ### Expenses Dashboard
+
 <img width="1906" height="908" alt="image" src="https://github.com/user-attachments/assets/2acef86f-2621-4387-9bf5-3c57cce1e515" />
 
 ### Add Expense Dialog
+
 <img width="565" height="442" alt="image" src="https://github.com/user-attachments/assets/e18fd53e-7bc5-407a-9e4b-6301ec6f69a7" />
 
 ### Statistics Panel
+
 <img width="1910" height="906" alt="image" src="https://github.com/user-attachments/assets/4b13c2c0-e7a4-4506-8c0b-50f6955ad375" />
 
 ---
+
+<a id="available-scripts"></a>
 
 ## 🔧 Available Scripts
 
 ### Backend
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server with hot reload |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run db:seed` | Seed database with sample data |
+| Command           | Description                              |
+| ----------------- | ---------------------------------------- |
+| `npm run dev`     | Start development server with hot reload |
+| `npm run build`   | Build for production                     |
+| `npm run start`   | Start production server                  |
+| `npm run db:seed` | Seed database with sample data           |
 
 ### Frontend
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build for production     |
 | `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
+| `npm run lint`    | Run ESLint               |
 
 ---
+
+<a id="troubleshooting"></a>
 
 ## 🐛 Troubleshooting
 
 ### Common Issues
 
 **1. Database Connection Error**
+
 ```
 Error: Connection refused
 ```
+
 ➡️ Check if your `DATABASE_URL` in `.env` is correct and includes `?sslmode=require`
 
 **2. CORS Error in Browser**
+
 ```
 Access-Control-Allow-Origin error
 ```
+
 ➡️ Make sure backend is running on port 4200 and frontend on port 3000
 
 **3. Port Already in Use**
+
 ```
 Error: EADDRINUSE
 ```
+
 ➡️ Change the port in `.env` or kill the process using that port
 
 ---
